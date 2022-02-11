@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <input type="text" name="" id="email__input">
+    <button id="email__button">Check</button>
+  </form>
+  
+</body>
+<script>
+  'use strict';
+
+  const emailInput = document.querySelector('#email__input');
+  const emailButton = document.querySelector('#email__button');
+
+  function checkValidityOfEmail(email) {
+    const regexp = /(^)(http|https)(:\/\/)([a-z]*)(.php|.html)($)/;
+    return regexp.test(email);
+  }
+
+  emailButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert(checkValidityOfEmail(emailInput.value)); 
+  })
+</script>
+</html>
