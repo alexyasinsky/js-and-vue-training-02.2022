@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <input type="text" name="email" id="email_input">
+    <button id="email_button"></button>
+  </form>
+</body>
+<script>
+  'use strict';
+
+  const emailInput = document.querySelector('#email_input');
+  const emailButton = document.querySelector('#email_button');
+
+  const testEmail = 'test@email.ru';
+
+  emailButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    emailInput.value = testEmail;
+  })
+
+
+</script>
+</html>
