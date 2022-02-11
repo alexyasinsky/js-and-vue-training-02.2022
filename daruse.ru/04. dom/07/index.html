@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .square {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="square"></div>
+</body>
+<script>
+  'use strict';
+  const square = document.querySelector('.square');
+  
+  square.addEventListener('mouseover', () => {
+    square.style.backgroundColor = 'green';
+  });
+
+  square.addEventListener('mouseout', () => {
+    square.style.backgroundColor = 'red';
+  });
+
+
+</script>
+</html>
