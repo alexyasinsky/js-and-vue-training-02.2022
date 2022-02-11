@@ -8,7 +8,7 @@ function arrayQuery() {
   return new Promise(
     resolve => {
       rl.question('Enter name and age of person: ', input => {
-        const name = input.match(/[a-zа-я]*/i)[0];
+        const name = input.match(/[a-zа-я]/ig).join('');
         const age = input.match(/\d/g).join('');
         const person = {name, age};
         resolve(person);
