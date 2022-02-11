@@ -6,7 +6,7 @@ const str = rls.question('Enter text \n');
 
 let arr = [];
 
-const firstWord = (str.match(/^[а-я]*/)[0]);
+const firstWord = (str.match(/^[а-я]*/i)[0]);
 let otherWords = str.match(/[!\?\.]\s[а-я]*/gi);
 otherWords = otherWords.map(word => word.slice(2));
 

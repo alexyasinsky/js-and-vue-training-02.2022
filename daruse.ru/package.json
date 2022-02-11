@@ -1,5 +1,5 @@
 {
-  "name": "base",
+  "name": "daruse.ru",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,10 +8,7 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "readline-sync": "^1.4.10"
-  },
   "dependencies": {
-    "moment": "^2.29.1"
+    "readline-sync": "^1.4.10"
   }
 }
