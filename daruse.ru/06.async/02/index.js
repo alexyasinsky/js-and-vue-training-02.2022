@@ -1,16 +1,21 @@
 'use strict';
 
-const counter = (num) => {
+const counter = (start, end) => {
   return new Promise((resolve) => {
-    for (let i = num; i <= 4; i++ ) {
+    for (let i = start; i <= end; i++ ) {
       setTimeout(() => {
         console.log(i);
-      }, 1000)
+        if (i === end) {
+          resolve();
+        }
+      },i*1000)
     }
-    resolve();
   })
 }
-counter(1).then(()=> {
+counter(1, 4).then(() => {
   console.log('done');
-});
+  }
+);
+
+
 

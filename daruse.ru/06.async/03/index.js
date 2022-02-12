@@ -1,21 +1,20 @@
+
 'use strict';
 
-
-function counter(num) {
-  return new Promise(
-  () => {
-    if (num <= 4) {
-      setTimeout(()=>{
-        console.log(num);
-        counter(num+1);
-      }, 1000)
+const counter = (start, end) => {
+  return new Promise((resolve) => {
+    for (let i = start; i <= end; i++ ) {
+      setTimeout(() => {
+        console.log(i);
+        if (i === end) {
+          resolve();
+        }
+      },i*1000)
     }
-  }
-)};
-
-async function main(firstNum) {;
-  await counter(firstNum);
-  console.log('done');
+  })
 }
 
-main(1);
+(async () => {
+  await counter(1, 4);
+  console.log('done');
+})();
